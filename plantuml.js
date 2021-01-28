@@ -12,8 +12,8 @@ let isStaticVariable = 'source.lang.swift.decl.var.static'
 let isNull = null
 
 
-let linkTypeInheritance = '--|>' 
-let linkTypeRealize = '..|>' 
+let linkTypeInheritance = '-u-|>' 
+let linkTypeRealize = '.u.|>' 
 let linkTypeDependency = '<..' 
 let linkTypeAssociation = '-->' 
 let linkTypeAggregation = '--o' 
@@ -41,21 +41,23 @@ let styleProtocol = `<< (P,GoldenRod) protocol >>`
 function uniqName(item, index, relationship){
     var newName = item.name
     var linkTypeKey = item.name + "LinkType"
+
     if (uniqElementNames.includes(item.name)) {
         newName += `${index}`
         if (item.kind == isSwiftExtension) {
             var connect = `${item.name} ${linkTypeDependency} ${newName} : ${relationship}`
             extnConnections.push(connect)
-            
         }
     }
-    // else if(item.kind == isSwiftExtension) {
-    //     newName += `${index}`
-    //     var connect = `${item.name} <.. ${newName} : ${relationship}`
-    //     extnConnections.push(connect)
-    // }
+    else if(item.kind == isSwiftExtension) {
+        newName += `${index}`
+        var connect = `${item.name} ${linkTypeDependency} ${newName} : ${relationship}`
+        extnConnections.push(connect)
+    }
     else {
-        uniqElementNames.push(item.name)
+        if(item.kind == isSwiftClass) {
+            uniqElementNames.push(item.name)
+        }
         uniqElementAndTypes[item.name] =  relationship 
 
         if (relationship == "inherits"){
@@ -96,9 +98,48 @@ var uniqElementAndTypes = {}
 
 var connections = []
 var extnConnections = []
-
+var itemsPendingForConnections = []
 
 srcjs.forEach(function (item){
+    if (item && item.kind == isSwiftProtocol) {
+        process(item)
+    }
+}
+);
+
+srcjs.forEach(function (item){
+    if (item && item.kind == isSwiftClass) {
+        process(item)
+    }
+}
+);
+
+srcjs.forEach(function (item){
+    if (item && item.kind == isSwiftStruct) {
+        process(item)
+    }
+}
+);
+
+srcjs.forEach(function (item){
+    if (item && item.kind == isSwiftEnum) {
+        process(item)
+    }
+}
+);
+
+srcjs.forEach(function (item){
+    if (item && item.kind == isSwiftExtension) {
+        process(item)
+    }
+}
+);
+
+//always make connections in the very end. Else superclasses, if parsed later will not connect properly
+makePendingConnections()
+
+
+function process(item){
     var strItem = ''
     if (item && item.kind == isSwiftClass && item.name){
         
@@ -145,7 +186,16 @@ srcjs.forEach(function (item){
     }
 
     if (item.inherits && item.inherits.length > 0) {
+        itemsPendingForConnections.push(item)
+    }
 
+    strItem += methods+ '\n}\n'
+    msg += strItem
+    i++
+}
+
+function makePendingConnections() {
+    itemsPendingForConnections.forEach(function(item) {
         item.inherits.forEach(function (obj) {
 
             var linkTo = obj["key.name"]
@@ -155,18 +205,14 @@ srcjs.forEach(function (item){
             if (uniqElementAndTypes[linkTo] == "confirms to"){
                 linkTypeKey = linkTo + "LinkType"
             }
-           
-            var connect = `${item.name} ${uniqElementAndTypes[linkTypeKey]} ${linkTo} ${namedConnection}`
+
+            var linkType = (uniqElementAndTypes[linkTypeKey]) ? uniqElementAndTypes[linkTypeKey] : "--"
+        
+            var connect = `${item.name} ${linkType} ${linkTo} ${namedConnection}`
             connections.push(connect)
         })
-
-    }
-
-    strItem += methods+ '\n}\n'
-    msg += strItem
-    i++
+    })
 }
-);
 
 var out = plantumlTemplate.replace(STR2REPLACE, msg + "\n" + connections.join("\n") + "\n" + extnConnections.join("\n"))
 
