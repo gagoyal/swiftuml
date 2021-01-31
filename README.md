@@ -24,19 +24,37 @@ once it copy everything to your clipboard (MacOS) you can paste it in your favor
 
 `sh plantuml.sh demo.swift`
 
-will produce this diagram [Full Image](https://www.plantuml.com/plantuml/svg/hLPBRzim3BxhLmYzBCNQ7BhB41H1qzTGe4k3EXYmNGPLPc8jUXYIl3PRzzydoNOYnMtc0hia5Fdn4qM9fD6PiKJRId3q3cVphxTNxdToFqS5om63AEqQ2n0Fe0qoAoPBeed0fY2vUcHoYHU46zYuNaql4UN467pm1Gf6EHnWOd0Zuzy8u_U2h62gc8718K9_MlWve-iMtiWElhNFYSn117CjfbPDcAoDNjgtqGNH0UZ-4uf9PPKWbj4M42iIvAMg7ff8Qn6VdkB1rP7Ir2Nj4CEJ1McOadWyJXplWThWveNWb1tXRBK-vnKSOcDrvTJxV3xktycTcKbc1nIa1Jqox1UCugDVLvolfqH07XYtoq0xE_gaU0xoNZdcKYkhgEAxuSpSEr1rfcknvp4ozyXCmShWsIwYaAKBOrHgMB2d9EIvMYuvQTEzMVqhO4ThFJQz-ZjvjrXaZypI8j15woQnjsnPsCm2yFem82knZt6Rp3VcSR9i_BpmrlIVHFa_wNa15whoZ-AIM9AfIjCweHrjZyGoIJK8zyG62wK3GN9Z3MLCl-kNN72X0QA8edLQuUgHwDny0wrYzAwsLuWtqjqneQj0qIxsvj5nbfKf1jyTZvTLcHnYo_Q_gKu-z6qk4wbi0Nhc6f9hMLvNlw-EEiHmR9I0cMO_YONFO0kL9r4qNZV-zYJX7Rh4y0R2QyPRK8TprrRdojD6bWrrtnrVs-tbdLwWG-qqEZv-7cycsGWpwLYODQWPHy7SOcDp64YlEVlPyfej6K01v8K8q7JWuT2PecO-mbJ91TF2OAlGfjdkXyMzC22tlJO5jcqdW5vYIW2XlQNskCB3gQRPtSCFFn4JKt3lzgSThaxzxp9s0Bruwm4z73PJT-JB3ZMrxRHjQTRwCv2v_tv2Vm40)
+will produce this diagram [Full Image](http://www.plantuml.com/plantuml/svg/dLRRQXiz4BxVfn2v-RtyYIyCRM498KxYb4BgcAmfj3T5rewzgdLO96qJzz1dxwu6sR8N7z8RCuTllj6CHhDEhgsZnjLI9F-HVFhvOTJy3f-cISaB820hjo8Iv0oCJUoIgueQAeajQQ6VkLgGEHKMrg6ZyLt21BMMdDtNGgp6L49nHgWb6vLSNfBUvFoz5WMe9rsaf3BQQQO5kReYFvFaTw2OwiL2q9a0px3MZX4GyiUrMEYb4TdcAAyynN016DSAfuVTwbevC7VKqLpNXc4H7Ui9nN3534XGhZVNnXDaQKO-A1Tb-mGbPm9pe0mOBEaInfhRxMRSSBOAS9HXk_DK5I2z6yLjhw5SeREL3YMwfGRhfcQxgRNJaZhE0c1js4NcZXfRyigZWX8QmrrFKGbPPM3ENxAqs_-uwxljZE7JqW145nNfEpFvJ4rXlu3H4RfZFVtcXagx4ioadecc-DRc6RjcJ_c_rHBGE36w0kDMZVN2Mmt_JXry15VgefTsKpHvmIWgeYGT1wOvaV2UYm3QuUpwi24jRV34rATct9Ujc-amtHCmv-DRmJ_1_9paozMDg24brfcQkTq7FG5ZDOuzYg-A6qI1WnCZctl97MLB7ngK_R5OU5NRilSrIxsigrvdu3QK_yet4Y1XY_DHFSxd-JDthFJCaUxvH-SFV54s1G08p0AgbeVMzPskm-97SV2689CshEH5m_3YG5ck5TBikTp1smDXEEj-ZJ1G3anc-G_8qltT6hmxUeeaBDIB-kBNrNeRPuIh4WntDi6LIj0Vq94Vj-hUy5jgzZkZFHfGZHGZrZkqN_SRR_HXpWZJQiwDjCJf9Dw0I3JE7sVVW3aI-v2c-s7ROUjko0vd1t4QCxwfOzM4buUmuuZXeWE8Xnf1wxyaEqYSM7BPxs-6Dsj79Mb7ihM7sKIh7orl3aE6zcjGHIr5alm5)
 
-Generates the below content, which you can copy and paste it in [PlantText](https://www.planttext.com/?text=hLPBRzim3BxhLmYzBCNQ7BhB41H1qzTGe4k3EXYmNGPLPc8jUXYIl3PRzzydoNOYnMtc0hia5Fdn4qM9fD6PiKJRId3q3cVphxTNxdToFqS5om63AEqQ2n0Fe0qoAoPBeed0fY2vUcHoYHU46zYuNaql4UN467pm1Gf6EHnWOd0Zuzy8u_U2h62gc8718K9_MlWve-iMtiWElhNFYSn117CjfbPDcAoDNjgtqGNH0UZ-4uf9PPKWbj4M42iIvAMg7ff8Qn6VdkB1rP7Ir2Nj4CEJ1McOadWyJXplWThWveNWb1tXRBK-vnKSOcDrvTJxV3xktycTcKbc1nIa1Jqox1UCugDVLvolfqH07XYtoq0xE_gaU0xoNZdcKYkhgEAxuSpSEr1rfcknvp4ozyXCmShWsIwYaAKBOrHgMB2d9EIvMYuvQTEzMVqhO4ThFJQz-ZjvjrXaZypI8j15woQnjsnPsCm2yFem82knZt6Rp3VcSR9i_BpmrlIVHFa_wNa15whoZ-AIM9AfIjCweHrjZyGoIJK8zyG62wK3GN9Z3MLCl-kNN72X0QA8edLQuUgHwDny0wrYzAwsLuWtqjqneQj0qIxsvj5nbfKf1jyTZvTLcHnYo_Q_gKu-z6qk4wbi0Nhc6f9hMLvNlw-EEiHmR9I0cMO_YONFO0kL9r4qNZV-zYJX7Rh4y0R2QyPRK8TprrRdojD6bWrrtnrVs-tbdLwWG-qqEZv-7cycsGWpwLYODQWPHy7SOcDp64YlEVlPyfej6K01v8K8q7JWuT2PecO-mbJ91TF2OAlGfjdkXyMzC22tlJO5jcqdW5vYIW2XlQNskCB3gQRPtSCFFn4JKt3lzgSThaxzxp9s0Bruwm4z73PJT-JB3ZMrxRHjQTRwCv2v_tv2Vm40)
+Generates the below content, which you can copy and paste it in [PlantText](https://www.planttext.com/api/plantuml/png/d5RDRjim3BxxAOHUbc1D3W6s0KPHD6tJeK2N1dKmOBiCYip4McJ9aEIrsT-BxR17sYjCbkn4jfV4tIMWo8yVJOgaykVNx-12QInrdhBW1Ohc7-ucvdVyC0yI6WE2DDCRb4Aw0Aa2jQOymnAdI2Ku5e-Khz0ICmLRrydqEY0CAuLERdB6DbESGdo2i4Ax8pexGxtPwLl1Ok0F8kwZJ0ejY63e_1nz2u8V5SLSh5OCBnXOXktf6052FtM1XLxV8zjzoZE_Ohmg_GgXkzkLoBa6UOqrZaGkYKkYfUsG3EL4GWfSzvP2MeAm7w9Rhhrexo6Xf2nKAJld5AzXAgYg5-EIaaq5B-LwvJ6F8NLbjsBTAZ7bpbX8Xm9TOUdonh9Ur5oB56jAAe2lg24ZqvugePb5LOUgC5JtkBdDC9Emf4zXlrr_l-hDSlhmUI81l8lopesUVCGoLXz12X_Tr7Q_kJ4NEW4vonVC95_eN3rQQalvKeaKd78cHGPIRunsOBMIVi4Qte5EH5pBhUIwBMh0CMi5gHbic6w4DvHLe1Pdq-OAKj1wbYrrruZxelqxqdww1o3Q-XU27S7e54NhpINBeO-KbhbHDmPwPbQWS6tln6VvZJp7KKTFSo-cuSdQkbQ7WxucyInNIUzJsBUoo7gjXjjH_Y_VXDcczZZl-Vro6JrIJHBBx9qj_-JqZguIam00Sr60v-cXTNqjychnEt7qgcGIafYtoJ0yQU2AcdjebArskQFNXzrCvzarGg0OWb3Hhr1R8urgZTuS_OgWMgY3VF3zVBkDGqIvwLIgLL2kL6UlqBxTRjMzxiM6t6kixL67AYGFiTsXmtnehDx3728Y-9BAL24j0dy3Eg9fTB_uN0nCpUPesWzRWwsr8LkSBKGtvd8OZsHJJPw37KVOnxuEy9lQWNP_IUf8rx7eR3ZSDMzOj4hWzetHbxtfjEKW6dNLP4v_0Jmk_fa5Vm400F__0m00)
 
 ```
+
 
 @startuml
 ' STYLE START
 hide empty members
 skinparam shadowing false
 ' STYLE END
+class "FullyNamed" as FullyNamed << (P,GoldenRod) protocol >> {
+
+}
+class "Togglable" as Togglable << (P,GoldenRod) protocol >> {
+  ~toggle()
+
+}
+class "Named" as Named << (P,GoldenRod) protocol >> {
+
+}
+class "Aged" as Aged << (P,GoldenRod) protocol >> {
+
+}
+class "CounterDataSource" as CounterDataSource << (P,GoldenRod) protocol >> {
+  ~increment(forCount:): Int
+
+}
 class "Vehicle" as Vehicle {
-  +makeNoise()
+  ~makeNoise()
 
 }
 class "Bicycle" as Bicycle {
@@ -46,7 +64,7 @@ class "Tandem" as Tandem {
 
 }
 class "Train" as Train {
-  +makeNoise()
+  ~makeNoise()
 
 }
 class "Car" as Car {
@@ -55,72 +73,23 @@ class "Car" as Car {
 class "AutomaticCar" as AutomaticCar {
 
 }
-class "Double" as Double << (E,orchid) extension >> {
-
-}
-class "Rect" as Rect << (S, SkyBlue) struct >> {
-
-}
-class "Rect" as Rect8 << (E,orchid) extension >> {
-  +init(center:size:)
-
-}
-class "FullyNamed" as FullyNamed << (P,GoldenRod) protocol >> {
-
-}
-class "Person" as Person << (S, SkyBlue) struct >> {
-
-}
 class "Starship" as Starship {
-  +init(name:prefix:)
-
-}
-class "Togglable" as Togglable << (P,GoldenRod) protocol >> {
-  +toggle()
-
-}
-class "OnOffSwitch" as OnOffSwitch << (E,LightSteelBlue) enum >> {
-  +toggle()
-
-}
-class "Named" as Named << (P,GoldenRod) protocol >> {
-
-}
-class "Aged" as Aged << (P,GoldenRod) protocol >> {
-
-}
-class "Person2" as Person2 << (S, SkyBlue) struct >> {
-
-}
-class "CounterDataSource" as CounterDataSource << (P,GoldenRod) protocol >> {
-  +increment(forCount:)
+  ~init(name:prefix:)
 
 }
 class "Counter" as Counter {
-  +increment()
+  ~increment()
 
 }
 class "ThreeSource" as ThreeSource {
 
 }
 class "TowardsZeroSource" as TowardsZeroSource {
-  +increment(forCount:)
-
-}
-class "IntStack" as IntStack << (S, SkyBlue) struct >> {
-  +push(_:)
-  +pop()
-
-}
-class "Stack" as Stack << (S, SkyBlue) struct >> {
-  +push(_:)
-  +pop()
-
-}
-class "Stack" as Stack23 << (E,orchid) extension >> {
+  ~increment(forCount:): Int
 
 }
 class "AnotherPublicClass" as AnotherPublicClass {
+  +somePublicProperty
   -somePrivateMethod()
 
 }
@@ -129,32 +98,68 @@ class "AnotherInternalClass" as AnotherInternalClass {
 
 }
 class "AnotherFilePrivateClass" as AnotherFilePrivateClass {
-  +someFilePrivateMethod()
+  ~someFilePrivateMethod()
   -somePrivateMethod()
 
 }
 class "AnotherPrivateClass" as AnotherPrivateClass {
-  +somePrivateMethod()
+  ~somePrivateMethod()
+
+}
+class "Rect" as Rect << (S, SkyBlue) struct >> {
+
+}
+class "Person" as Person << (S, SkyBlue) struct >> {
+
+}
+class "Person2" as Person2 << (S, SkyBlue) struct >> {
+
+}
+class "IntStack" as IntStack << (S, SkyBlue) struct >> {
+  ~push(_:)
+  ~pop(): Int
+
+}
+class "Stack" as Stack << (S, SkyBlue) struct >> {
+  ~push(_:)
+  ~pop(): Element
+
+}
+class "OnOffSwitch" as OnOffSwitch << (E,LightSteelBlue) enum >> {
+  ~toggle()
+
+}
+class "Double" as Double25 << (E,orchid) extension >> {
+
+}
+class "Rect" as Rect26 << (E,orchid) extension >> {
+  -init(center:size:)
+
+}
+class "Stack" as Stack27 << (E,orchid) extension >> {
 
 }
 
-Bicycle --|> Vehicle : inherits
-Tandem --|> Bicycle : inherits
-Train --|> Vehicle : inherits
-Car --|> Vehicle : inherits
-AutomaticCar --|> Car : inherits
-Person ..|> FullyNamed : confirms to
-Starship ..|> FullyNamed : confirms to
-OnOffSwitch ..|> Togglable : confirms to
-Person2 ..|> Named : confirms to
-Person2 ..|> Aged : confirms to
-ThreeSource --|> NSObject 
-ThreeSource ..|> CounterDataSource : confirms to
-TowardsZeroSource --|> NSObject 
-TowardsZeroSource ..|> CounterDataSource : confirms to
-Rect <.. Rect8 : ext
-Stack <.. Stack23 : ext
+Bicycle -u-|> Vehicle : inherits
+Tandem -u-|> Bicycle : inherits
+Train -u-|> Vehicle : inherits
+Car -u-|> Vehicle : inherits
+AutomaticCar -u-|> Car : inherits
+Starship .u.|> FullyNamed : confirms to
+ThreeSource -u-|> NSObject 
+ThreeSource .u.|> CounterDataSource : confirms to
+TowardsZeroSource -u-|> NSObject 
+TowardsZeroSource .u.|> CounterDataSource : confirms to
+Person .u.|> FullyNamed : confirms to
+Person2 .u.|> Named : confirms to
+Person2 .u.|> Aged : confirms to
+OnOffSwitch .u.|> Togglable : confirms to
+Double <.. Double25 : ext
+Rect <.. Rect26 : ext
+Stack <.. Stack27 : ext
 @enduml
+
+
 
 ```
 
