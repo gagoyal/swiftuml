@@ -15,7 +15,7 @@ let isNull = null
 let linkTypeInheritance = '-u-|>' 
 let linkTypeRealize = '.u.|>' 
 let linkTypeDependency = '<..' 
-let linkTypeAssociation = '-->' 
+let linkTypeAssociation = '-[dotted]->' 
 let linkTypeAggregation = '--o' 
 let linkTypeComposition = '--*' 
 let linkTypeGeneric = '--'
@@ -99,6 +99,8 @@ var uniqElementAndTypes = {}
 var connections = []
 var extnConnections = []
 var itemsPendingForConnections = []
+var dependencyLinks = []
+var dependecyLinksMap = {}
 
 srcjs.forEach(function (item){
     if (item && item.kind == isSwiftProtocol) {
@@ -178,11 +180,28 @@ function process(item){
             }
             else {
                 msig += ': ' + method.type + '\n'
-            }
 
+                let type = method.type.replace("?","").replace("!","")
+                if (type.includes(":") == false) {
+                    if (!dependecyLinksMap[item.name]) 
+                        dependecyLinksMap[item.name] = [];
+                    
+                    dependecyLinksMap[item.name].push(type);
+                }
+            }
             methods += msig
+
+            //Add parameter types
+            method.paramTypes.forEach(function (paramType) {
+                let type = paramType.replace("?","").replace("!","")
+                if (type.includes(":") == false) {
+                    if (!dependecyLinksMap[item.name]) 
+                        dependecyLinksMap[item.name] = [];
+                    
+                    dependecyLinksMap[item.name].push(type);
+                }
+            })
         })
-        
     }
 
     if (item.inherits && item.inherits.length > 0) {
@@ -212,6 +231,17 @@ function makePendingConnections() {
             connections.push(connect)
         })
     })
+
+    for (let item in dependecyLinksMap) {
+        dependecyLinksMap[item].forEach(function(type) {
+            let dependencyLink = `${item} ${linkTypeAssociation} ${type} : uses`
+
+            if (item != type && (type in uniqElementAndTypes) && connections.includes(dependencyLink) == false) {
+                connections.push(dependencyLink)
+            }
+        })
+    }
+
 }
 
 var out = plantumlTemplate.replace(STR2REPLACE, msg + "\n" + connections.join("\n") + "\n" + extnConnections.join("\n"))
